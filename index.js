@@ -1,20 +1,9 @@
 const FormData = require('form-data');
 const TelegramBot = require('node-telegram-bot-api') ; 
-const fs = require('fs')
 
 
 const token = '8126562032:AAEet4PCFfExxdWFVSRotNbniTWFesn6C6w' ;
 const bot = new TelegramBot(token , {polling : true}) ;
-
-const form = new FormData() ; 
-const dp = fs.createReadStream('./images/DP.webp') ; 
-const bs = fs.createReadStream('./images/binary-search.png') ;
-const sort = fs.createReadStream('./images/Sorting.jpg') ; 
-
-form.append("DP" , dp) ;
-form.append("Binary Search" , bs) ; 
-form.append("Sorting" , sort) ; 
-
 
 
 const getRandomJoke = async () => {
